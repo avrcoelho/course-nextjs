@@ -11,6 +11,12 @@ interface Props {
 }
 
 export default function Home({ recommendedProducts }: Props) {
+  async function handleSum() {
+    const { sum } = (await import("../lib/math")).default;
+
+    alert(sum(2, 2));
+  }
+
   return (
     <div>
       <Title>Hello world</Title>
@@ -24,6 +30,8 @@ export default function Home({ recommendedProducts }: Props) {
           ))}
         </ul>
       </section>
+
+      <button onClick={handleSum}>Sum!</button>
     </div>
   );
 }
