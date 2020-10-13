@@ -1,4 +1,5 @@
 import { GetServerSideProps } from "next";
+import SEO from "../components/SEO";
 import { Title } from "../styles/pages/Home";
 
 interface IProduct {
@@ -19,6 +20,8 @@ export default function Home({ recommendedProducts }: Props) {
 
   return (
     <div>
+      <SEO title="Seu Ecommerce" />
+
       <Title>Hello world</Title>
 
       <section>
